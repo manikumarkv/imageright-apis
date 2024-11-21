@@ -8,6 +8,7 @@ interface APIOptions {
   AccessToken: string;
 }
 
+
 class Library {
   private baseUrl: string;
   private version: string;
