@@ -16,3 +16,7 @@ export function getFileById(api: AxiosInstance, fileId: string, includeHasNotes:
 export function getRelatedFiles(api: AxiosInstance, fileId: string): Promise<any> {
   return api.get(`api/files/${fileId}/related`).then((res) => Promise.resolve(res.data));
 }
+
+export function mergeFiles(api: AxiosInstance, sourceId: string, targetId: string): Promise<any> {
+  return api.post(`api/files/${sourceId}merge`, targetId).then((res) => Promise.resolve(res.data));
+}
