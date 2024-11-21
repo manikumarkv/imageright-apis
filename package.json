@@ -1,0 +1,30 @@
+{
+  "name": "hcc-imageright-apis",
+  "version": "1.0.2",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vertafore",
+    "ir",
+    "apis",
+    "imageright",
+    "imageright apis",
+    "vertafore apis"
+  ],
+  "author": "Mani Kumar<manikumarkv@gmail.com>",
+  "license": "MIT",
+  "description": "imageright APIs",
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.7"
+  },
+  "files": [
+     "dist/**/*"
+  ]
+}
