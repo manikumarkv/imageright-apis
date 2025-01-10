@@ -1,5 +1,5 @@
 {
-  "name": "hcc-imageright-apis",
+  "name": "tmhcc-ir-apis",
   "version": "1.0.2",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
