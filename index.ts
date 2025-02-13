@@ -27,6 +27,10 @@ class Library {
   connect(username: string, password: string): Promise<ImageRight> {
     return authenticate(this.baseUrl, username, password).then(this.createAPI.bind(this));
   }
+
+  getVersion() {
+    return this.version;
+  }
 }
 
 export default Library;
