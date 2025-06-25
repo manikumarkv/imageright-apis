@@ -18,7 +18,7 @@ export function getRelatedFiles(api: AxiosInstance, fileId: string): Promise<any
 }
 
 export function mergeFiles(api: AxiosInstance, sourceId: string, targetId: string): Promise<any> {
-  return api.post(`api/files/${sourceId}merge`, targetId).then((res) => Promise.resolve(res.data));
+  return api.post(`api/files/${sourceId}/merge`, targetId).then((res) => Promise.resolve(res.data));
 }
 
 export function updateFilesV2(api: AxiosInstance, fileId: string, fileObj: string): Promise<any> {
