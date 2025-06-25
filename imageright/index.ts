@@ -6,7 +6,7 @@ import { createBatch } from "./api/batches";
 import { getContainers } from "./api/containers";
 import { createDocument, findDocuments, getDocumentById, moveDocumentV2, moveDocument, updateProperties, copyDocument, deleteDocument } from "./api/documents";
 import { getDrawers, getDrawerById, getDrawerByName, getDrawersInContainer, getDrawersInContainerByName } from "./api/drawers";
-import { createFile, findFiles, getFileById, mergeFiles } from "./api/files";
+import { createFile, findFiles, getFileById, mergeFiles, updateFilesV2 } from "./api/files";
 import { createFolder, findFolders, getFolderById } from "./api/folders";
 import { getAllowedTypes, getAllowedTypesForContainer, getAttributeDefinitionsForType, getFileTypeExtensions, getFileTypeTemplate, getObjectType, getSortOptionsForType, getTypesForClass } from "./api/objecttypes";
 import { checkReadPermissions, copyPage, createPage, createPageV2, getAllPagesFromDocument, getPageById, getPageImageMetadata, lockPage, mergeToDocument, movePage, movePageV2, rotatePage, unlockPage, updatePageContent, updatePageContentV2, updatePageProperties } from "./api/pages";
@@ -153,6 +153,9 @@ class ImageRight {
 
   mergeFiles(sourceId: string, targetId: string): Promise<any> {
     return mergeFiles(this.api(), sourceId, targetId);
+  }
+  updateFilesV2(fileId: string, fileObj: string): Promise<any> {
+    return updateFilesV2(this.api(), fileId, fileObj);
   }
 
   // Folders
