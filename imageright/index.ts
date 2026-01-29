@@ -6,7 +6,7 @@ import { createBatch } from "./api/batches";
 import { getContainers } from "./api/containers";
 import { createDocument, findDocuments, getDocumentById, moveDocumentV2, moveDocument, updateProperties, copyDocument, deleteDocument } from "./api/documents";
 import { getDrawers, getDrawerById, getDrawerByName, getDrawersInContainer, getDrawersInContainerByName } from "./api/drawers";
-import { createFile, findFiles, getFileById, mergeFiles, updateFilesV2 } from "./api/files";
+import { createFile, createFileRelationship, deleteFileRelationship, findFiles, getFileById, getRelatedFiles, mergeFiles, updateFilesV2 } from "./api/files";
 import { createFolder, findFolders, getFolderById } from "./api/folders";
 import { getAllowedTypes, getAllowedTypesForContainer, getAttributeDefinitionsForType, getFileTypeExtensions, getFileTypeTemplate, getObjectType, getSortOptionsForType, getTypesForClass } from "./api/objecttypes";
 import { checkReadPermissions, copyPage, createPage, createPageV2, getAllPagesFromDocument, getPageById, getPageImageMetadata, lockPage, mergeToDocument, movePage, movePageV2, rotatePage, unlockPage, updatePageContent, updatePageContentV2, updatePageProperties } from "./api/pages";
@@ -149,6 +149,18 @@ class ImageRight {
 
   getFileById(fileId: string, includeHasNotes: boolean): Promise<any> {
     return getFileById(this.api(), fileId, includeHasNotes);
+  }
+
+  getRelatedFiles(fileId: string): Promise<any> {
+    return getRelatedFiles(this.api(), fileId);
+  }
+
+  createFileRelationship(targetFileId: string, relatedFileId: string): Promise<any> {
+    return createFileRelationship(this.api(), targetFileId, relatedFileId);
+  }
+
+  deleteFileRelationship(targetFileId: string, relatedFileId: string): Promise<any> {
+    return deleteFileRelationship(this.api(), targetFileId, relatedFileId);
   }
 
   mergeFiles(sourceId: string, targetId: string): Promise<any> {

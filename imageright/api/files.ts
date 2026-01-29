@@ -17,6 +17,14 @@ export function getRelatedFiles(api: AxiosInstance, fileId: string): Promise<any
   return api.get(`api/files/${fileId}/related`).then((res) => Promise.resolve(res.data));
 }
 
+export function createFileRelationship(api: AxiosInstance, targetFileId: string, relatedFileId: string): Promise<any> {
+  return api.put(`api/files/${targetFileId}/related/${relatedFileId}`).then((res) => Promise.resolve(res.data));
+}
+
+export function deleteFileRelationship(api: AxiosInstance, targetFileId: string, relatedFileId: string): Promise<any> {
+  return api.delete(`api/files/${targetFileId}/related/${relatedFileId}`).then((res) => Promise.resolve(res.data));
+}
+
 export function mergeFiles(api: AxiosInstance, sourceId: string, targetId: string): Promise<any> {
   return api.post(`api/files/${sourceId}/merge`, targetId).then((res) => Promise.resolve(res.data));
 }
