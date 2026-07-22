@@ -8,7 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Testing infrastructure with [Vitest](https://vitest.dev) and [`axios-mock-adapter`](https://github.com/ctimmerm/axios-mock-adapter). 23 starter tests covering `authentication`, `drawers`, `users`, `files`, and the top-level `Library` flow. Run with `npm test` or `npm run test:watch`.
+- Full test coverage for every API module: **142 tests** across 22 test files, covering all endpoints in `accounts`, `attributes`, `authentication`, `batches`, `containers`, `documents`, `drawers`, `files`, `folders`, `images`, `instances`, `integration`, `licensing`, `marks`, `notes`, `objecttypes`, `overlays`, `pages`, `tasks`, `users`, and `workflows`, plus the top-level `Library` flow.
+- Testing infrastructure with [Vitest](https://vitest.dev) and [`axios-mock-adapter`](https://github.com/ctimmerm/axios-mock-adapter). Run with `npm test` or `npm run test:watch`.
 
 ### Changed
 - `tsconfig.json` now excludes `test/**/*` and `**/*.test.ts` from the build so tests never leak into `dist/` or the published tarball.
