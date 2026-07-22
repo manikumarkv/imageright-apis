@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/manikumarkv/imageright-apis#readme",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "devDependencies": {
     "axios-mock-adapter": "^2.1.0",

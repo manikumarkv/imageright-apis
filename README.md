@@ -15,7 +15,7 @@ It wraps the ImageRight HTTP endpoints (authentication, accounts, drawers, files
 npm install tmhcc-ir-apis
 ```
 
-Peer runtime: any environment that can run modern axios (Node.js 18+ recommended). TypeScript type definitions are bundled.
+Peer runtime: any environment that can run modern axios (Node.js 20+ required — Node 18 is EOL). TypeScript type definitions are bundled.
 
 ## Quick start
 

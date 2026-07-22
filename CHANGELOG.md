@@ -9,11 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Tag-triggered npm publish workflow (`.github/workflows/publish.yml`). Pushing a `v*.*.*` git tag now builds, tests, and publishes to npm with provenance. The workflow verifies the tag matches `package.json` version before publishing.
-- GitHub Actions CI workflow (`.github/workflows/ci.yml`) that runs `npm ci`, `npm run build`, and `npm test` on Node 18, 20, and 22 for every push and PR to `main`. Status badge added to the README.
+- GitHub Actions CI workflow (`.github/workflows/ci.yml`) that runs `npm ci`, `npm run build`, and `npm test` on Node 20 and 22 for every push and PR to `main`. Status badge added to the README.
 - Full test coverage for every API module: **142 tests** across 22 test files, covering all endpoints in `accounts`, `attributes`, `authentication`, `batches`, `containers`, `documents`, `drawers`, `files`, `folders`, `images`, `instances`, `integration`, `licensing`, `marks`, `notes`, `objecttypes`, `overlays`, `pages`, `tasks`, `users`, and `workflows`, plus the top-level `Library` flow.
 - Testing infrastructure with [Vitest](https://vitest.dev) and [`axios-mock-adapter`](https://github.com/ctimmerm/axios-mock-adapter). Run with `npm test` or `npm run test:watch`.
 
 ### Changed
+- **Breaking (metadata):** `engines.node` raised from `>=18` to `>=20`. Node 18 is EOL (April 2025), and Vitest 4 requires Node 20.12+. Consumers on Node 18 should upgrade to a supported LTS.
 - `tsconfig.json` now excludes `test/**/*` and `**/*.test.ts` from the build so tests never leak into `dist/` or the published tarball.
 
 ## [1.0.11] - 2026-07-22
