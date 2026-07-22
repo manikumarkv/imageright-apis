@@ -1,10 +1,12 @@
 {
   "name": "tmhcc-ir-apis",
-  "version": "1.0.10",
+  "version": "1.0.11",
+  "description": "TypeScript client for the Vertafore ImageRight REST APIs (accounts, files, folders, documents, pages, tasks, workflows, and more).",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,11 +15,25 @@
     "apis",
     "imageright",
     "imageright apis",
-    "vertafore apis"
+    "vertafore apis",
+    "vertafore-imageright",
+    "sdk",
+    "client",
+    "typescript-sdk"
   ],
   "author": "Mani Kumar<manikumarkv@gmail.com>",
   "license": "MIT",
-  "description": "imageright APIs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manikumarkv/imageright-apis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manikumarkv/imageright-apis/issues"
+  },
+  "homepage": "https://github.com/manikumarkv/imageright-apis#readme",
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "typescript": "^7.0.2"
   },
