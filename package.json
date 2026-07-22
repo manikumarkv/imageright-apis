@@ -1,6 +1,6 @@
 {
   "name": "tmhcc-ir-apis",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
@@ -19,12 +19,12 @@
   "license": "MIT",
   "description": "imageright APIs",
   "devDependencies": {
-    "typescript": "^5.8.3"
+    "typescript": "^7.0.2"
   },
   "dependencies": {
-    "axios": "^1.15.0"
+    "axios": "^1.18.1"
   },
   "files": [
-     "dist/**/*"
+    "dist/**/*"
   ]
 }
