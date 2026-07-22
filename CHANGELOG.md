@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.12] - 2026-07-22
+
 ### Added
 - Tag-triggered npm publish workflow (`.github/workflows/publish.yml`). Pushing a `v*.*.*` git tag now builds, tests, and publishes to npm with provenance. The workflow verifies the tag matches `package.json` version before publishing.
 - GitHub Actions CI workflow (`.github/workflows/ci.yml`) that runs `npm ci`, `npm run build`, and `npm test` on Node 20, 22, and 24 for every push and PR to `main`. Status badge added to the README.
@@ -49,7 +51,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Earlier releases were not tracked in a changelog. See the git history for details:
 <https://github.com/manikumarkv/imageright-apis/commits/main>.
 
-[Unreleased]: https://github.com/manikumarkv/imageright-apis/compare/v1.0.11...HEAD
+[Unreleased]: https://github.com/manikumarkv/imageright-apis/compare/v1.0.12...HEAD
+[1.0.12]: https://github.com/manikumarkv/imageright-apis/compare/v1.0.11...v1.0.12
 [1.0.11]: https://github.com/manikumarkv/imageright-apis/compare/v1.0.10...v1.0.11
 [1.0.10]: https://github.com/manikumarkv/imageright-apis/compare/v1.0.9...v1.0.10
 [1.0.9]: https://www.npmjs.com/package/tmhcc-ir-apis/v/1.0.9
