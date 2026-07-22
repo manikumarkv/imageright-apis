@@ -41,7 +41,8 @@ Only add comments when the code isn't self-explanatory. Do not add JSDoc blocks 
 ## Build, test, publish
 
 - **Build:** `npm run build` (runs `tsc`, emits to `dist/`). Must succeed before publishing — `prepublishOnly` enforces this.
-- **Tests:** there are no tests yet. If you add one, wire up an actual `test` script (currently a placeholder that fails intentionally).
+- **Tests:** [Vitest](https://vitest.dev) + [`axios-mock-adapter`](https://github.com/ctimmerm/axios-mock-adapter). Run with `npm test` (single pass) or `npm run test:watch`. Tests live under `test/` (mirror the `imageright/api/` layout under `test/api/`). Test files use fabricated placeholder responses — do NOT check in real ImageRight payloads unless they've been scrubbed of PII. See existing tests for the shared `createMockedApi()` helper.
+- **Adding tests for a new endpoint:** at minimum, assert the HTTP method, URL (including path params and any query string), request body shape, and that the returned value is `res.data` verbatim.
 - **Dependency updates:** use `ncu` to survey, then `ncu -u && npm install` to apply. Always follow up with `npm audit` and `npm run build` before committing.
 - **Versioning:** follow [SemVer](https://semver.org/). Use `npm version patch|minor|major --no-git-tag-version` and add matching entries to `CHANGELOG.md` under a new heading. After merging, tag as `vX.Y.Z` and push the tag so changelog compare-links resolve.
 - **Publishing:** `npm publish --access public`. The package is public.

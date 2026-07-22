@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Testing infrastructure with [Vitest](https://vitest.dev) and [`axios-mock-adapter`](https://github.com/ctimmerm/axios-mock-adapter). 23 starter tests covering `authentication`, `drawers`, `users`, `files`, and the top-level `Library` flow. Run with `npm test` or `npm run test:watch`.
+
+### Changed
+- `tsconfig.json` now excludes `test/**/*` and `**/*.test.ts` from the build so tests never leak into `dist/` or the published tarball.
+
 ## [1.0.11] - 2026-07-22
 
 ### Added

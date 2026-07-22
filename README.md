@@ -112,9 +112,10 @@ git clone https://github.com/manikumarkv/imageright-apis.git
 cd imageright-apis
 npm install
 npm run build   # tsc → dist/
+npm test        # vitest run
 ```
 
-The published tarball only ships the compiled `dist/` output.
+The published tarball only ships the compiled `dist/` output. Tests live under `test/` and are excluded from the build.
 
 ## Contributing
 
