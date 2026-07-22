@@ -4,6 +4,7 @@ A lightweight TypeScript client for the [Vertafore ImageRight](https://www.verta
 
 It wraps the ImageRight HTTP endpoints (authentication, accounts, drawers, files, folders, documents, pages, tasks, workflows, images, etc.) behind a small, promise-based class so you don't have to hand-roll axios calls in every project.
 
+[![CI](https://github.com/manikumarkv/imageright-apis/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/manikumarkv/imageright-apis/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/tmhcc-ir-apis.svg)](https://www.npmjs.com/package/tmhcc-ir-apis)
 [![npm downloads](https://img.shields.io/npm/dm/tmhcc-ir-apis.svg)](https://www.npmjs.com/package/tmhcc-ir-apis)
 [![license](https://img.shields.io/npm/l/tmhcc-ir-apis.svg)](./LICENSE)
