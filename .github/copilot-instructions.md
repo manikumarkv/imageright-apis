@@ -45,7 +45,13 @@ Only add comments when the code isn't self-explanatory. Do not add JSDoc blocks 
 - **Adding tests for a new endpoint:** at minimum, assert the HTTP method, URL (including path params and any query string), request body shape, and that the returned value is `res.data` verbatim.
 - **Dependency updates:** use `ncu` to survey, then `ncu -u && npm install` to apply. Always follow up with `npm audit` and `npm run build` before committing.
 - **Versioning:** follow [SemVer](https://semver.org/). Use `npm version patch|minor|major --no-git-tag-version` and add matching entries to `CHANGELOG.md` under a new heading. After merging, tag as `vX.Y.Z` and push the tag so changelog compare-links resolve.
-- **Publishing:** `npm publish --access public`. The package is public.
+- **Publishing:** Tag-triggered via GitHub Actions (`.github/workflows/publish.yml`). To release a new version:
+  1. `npm version patch|minor|major --no-git-tag-version`
+  2. Update `CHANGELOG.md` — move `[Unreleased]` entries under the new version heading.
+  3. Commit and push to `main`.
+  4. `git tag vX.Y.Z && git push origin vX.Y.Z`.
+  5. GitHub Actions verifies the tag matches `package.json`, builds, tests, and publishes to npm with provenance.
+  Never run `npm publish` locally — the CI job is the single source of truth so no untested code reaches consumers.
 
 ## Changelog
 
