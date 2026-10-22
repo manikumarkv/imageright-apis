@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+- Bumped `axios` from `^1.18.1` to `^1.20.0` (and its transitive `follow-redirects` to 1.16.1), fixing 12 high-severity axios advisories (prototype-pollution gadgets, header injection, ReDoS, proxy/redirect SSRF bypasses) and 2 follow-redirects credential-leak advisories.
+- Bumped dev dependency `vitest` from `^4.1.10` to `^4.1.12`, pulling in patched `@vitest/mocker`, `vite` 8.3.5, `postcss` 8.5.31, `nanoid` 3.3.20 and `source-map-js` 1.2.2. `npm audit` now reports 0 vulnerabilities.
+
 ## [1.0.12] - 2026-07-22
 
 ### Added
