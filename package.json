@@ -33,15 +33,15 @@
   },
   "homepage": "https://github.com/manikumarkv/imageright-apis#readme",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "devDependencies": {
     "axios-mock-adapter": "^2.1.0",
     "typescript": "^7.0.2",
-    "vitest": "^4.1.10"
+    "vitest": "^5.0.5"
   },
   "dependencies": {
-    "axios": "^1.18.1"
+    "axios": "^1.20.0"
   },
   "files": [
     "dist/**/*"

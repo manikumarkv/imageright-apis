@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+- Bumped `axios` to `^1.20.0` and `vitest` to `^5.0.5` (via `npm audit fix` / `ncu -u`), resolving 8 advisories (axios prototype pollution/ReDoS/SSRF issues, follow-redirects header bypass, nanoid infinite loop, postcss source-map read, source-map-js DoS, and vite/launch-editor issues).
+
+### Changed
+- **Breaking (metadata):** `engines.node` raised from `>=20` to `>=22`, and CI matrix dropped Node 20, because Vitest 5 requires Node `^22.12.0 || ^24.0.0 || >=26.0.0`.
+
 ## [1.0.12] - 2026-07-22
 
 ### Added
