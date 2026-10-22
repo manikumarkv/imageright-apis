@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bumped `axios` from `^1.18.1` to `^1.20.0` (and its transitive `follow-redirects` to 1.16.1), fixing 12 high-severity axios advisories (prototype-pollution gadgets, header injection, ReDoS, proxy/redirect SSRF bypasses) and 2 follow-redirects credential-leak advisories.
 - Bumped dev dependency `vitest` from `^4.1.10` to `^4.1.12`, pulling in patched `@vitest/mocker`, `vite` 8.3.5, `postcss` 8.5.31, `nanoid` 3.3.20 and `source-map-js` 1.2.2. `npm audit` now reports 0 vulnerabilities.
 
+### Changed
+- Upgraded dev dependency `vitest` from `^4.1.12` to `^5.0.5`. All dependencies are now on their latest versions (`npm outdated` is empty).
+- **Breaking (metadata):** `engines.node` raised from `>=20` to `>=22`. Node 20 is EOL (April 2026), and Vitest 5 requires Node 22.12+. The CI matrix now tests Node 22 and 24. Consumers on Node 20 should upgrade to a supported LTS.
+
 ## [1.0.12] - 2026-07-22
 
 ### Added
