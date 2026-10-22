@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.13] - 2026-10-22
+
 ### Security
 - Bumped `axios` to `^1.20.0` and `vitest` to `^5.0.5` (via `npm audit fix` / `ncu -u`), resolving 8 advisories (axios prototype pollution/ReDoS/SSRF issues, follow-redirects header bypass, nanoid infinite loop, postcss source-map read, source-map-js DoS, and vite/launch-editor issues).
 
@@ -57,7 +59,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Earlier releases were not tracked in a changelog. See the git history for details:
 <https://github.com/manikumarkv/imageright-apis/commits/main>.
 
-[Unreleased]: https://github.com/manikumarkv/imageright-apis/compare/v1.0.12...HEAD
+[Unreleased]: https://github.com/manikumarkv/imageright-apis/compare/v1.0.13...HEAD
+[1.0.13]: https://github.com/manikumarkv/imageright-apis/compare/v1.0.12...v1.0.13
 [1.0.12]: https://github.com/manikumarkv/imageright-apis/compare/v1.0.11...v1.0.12
 [1.0.11]: https://github.com/manikumarkv/imageright-apis/compare/v1.0.10...v1.0.11
 [1.0.10]: https://github.com/manikumarkv/imageright-apis/compare/v1.0.9...v1.0.10
